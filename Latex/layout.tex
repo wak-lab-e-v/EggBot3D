@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+\usepackage{geometry}
+\geometry{a4paper,tmargin=25mm,bmargin=35mm,lmargin=20mm,rmargin=20mm,footskip=5mm}
+\usepackage[utf8x]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{subcaption}
+%\usepackage{picins}
+\usepackage{capt-of}
+\usepackage{lastpage}
+\usepackage[ngerman]{babel}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
+%\usepackage[headtopline,headsepline,footsepline,footbotline]{scrpage2}
+%\usepackage[headtopline,headsepline]{scrpage2}
+\usepackage[headsepline,footsepline]{scrlayer-scrpage}
+\usepackage{multirow}
+\usepackage{listings}            
+% fuer Stichwortverzeichnis
+\usepackage{makeidx}
+%\usepackage[automark,headsepline,footsepline,plainheadsepline,plainfootsepline]{scrpage2}
+
+\usepackage{xcolor,soul}
+\usepackage{colortbl} % Farbige Tabellen
+
+\usepackage{longtable}
+
+\usepackage{tabularx}
+%\setheadtopline{.5pt}
+%\setheadsepline{.5pt}
+
+\pagestyle{scrheadings}
+\clearscrheadfoot
+
+%%standard commands
+\newcommand{\ltab}{\raggedright\arraybackslash} % Tabellenabschnitt linksbündig
+\newcommand{\ctab}{\centering\arraybackslash} % Tabellenabschnitt zentriert
+\newcommand{\rtab}{\raggedleft\arraybackslash} % Tabellenabschnitt rechtsbündig
+
+\definecolor{LightGray}{rgb}{0.9,0.9,0.9}
+\newcommand{\CItoprowcolor}{\rowcolor{LightGray}}
+
