@@ -5,4 +5,10 @@
 *.out
 *.aux
 *.zip
-
+*.stl
+*.gcode
+EggBot3D.pdf
+ad_ink_old.zip
+ad-ink_320_r0.zip
+PrinterTest.py
+convert.exe
