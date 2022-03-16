@@ -31,8 +31,8 @@ void queryPen() {
 
 void queryButton() {
 	Serial.print(String(prgButtonState) +"\r\n");
-	sendAck();
 	prgButtonState = 0;
+	sendAck();
 }
 
 void queryLayer() {
