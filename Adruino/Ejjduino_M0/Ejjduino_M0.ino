@@ -29,17 +29,17 @@
 
 #define initSting "EBBv13_and_above Protocol emulated by Eggduino-Firmware V1.6a"
 //Rotational Stepper:
-#define step1 5
-#define dir1 6
-#define enableRotMotor 11
+#define step1 6
+#define dir1 3
+#define enableRotMotor 8
 #define rotMicrostep 16  //MicrostepMode (default 16)
 //Pen Stepper:
-#define step2 7
-#define dir2 8
-#define enablePenMotor 11
+#define step2 5
+#define dir2 2
+#define enablePenMotor 8
 #define penMicrostep 16 //MicrostepMode (default 16)
 
-#define servoPin 10 // Servo1 (pin3) Servo2 (pin4)Servo1 (pin3)
+#define servoPin 9 // Servo1 (pin3) Servo2 (pin4)Servo1 (pin3)
 
 // EXTRAFEATURES - UNCOMMENT TO USE THEM -------------------------------------------------------------------
 

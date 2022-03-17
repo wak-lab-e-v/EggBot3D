@@ -22,7 +22,7 @@ void makeComInterface(){
 
 void queryPen() {
 	char state;
-	if (penState=penUpPos)
+	if (penState==penUpPos)
 		state='1';
 	else
 		state='0';

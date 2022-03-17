@@ -37,7 +37,7 @@ Thanks to my wife and my daughter for their patience. :-)
 #define penMicrostep 16 //MicrostepMode, only 1,2,4,8,16 allowed, because of Integer-Math in this Sketch
 
 /*Servo*/
-#define servoPin 12 //Servo
+#define servoPin 9 //Servo
 
 /* PRG button*/
 #define prgButton 13
