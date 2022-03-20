@@ -15,6 +15,55 @@ Ich habe aus der mit Python 2.7 vorbereitete Inkscape Installation die Dateien
 \end{itemize}
 herausgesucht und mit ,,EggTest.py`` einen kleinen Bewegungstest programmiert. Da der Arduino noch kurz ,,hi`` sagt und  ca. 2 Sekunden braucht bist er sich mit seiner Firmwareversion meldet habe ich noch eine verzögerung von 2 Sekunden eingebaut.\\
 
+
+\subsection{Serial Commands}
+\begin{minipage}[t]{1.0\textwidth}
+\captionof{table}{Hier die Tabelle}
+\begin{tabular}{|p{8,1cm}|p{8,1cm}|}
+\hline
+\CItoprowcolor \textbf{Command} & \textbf{Description}\\
+\hline
+v & sendVersion\\
+\hline
+EM & enableMotors\\
+\hline
+SC & stepperModeConfigure\\
+\hline
+SP & setPen\\
+\hline
+SM & stepperMove\\
+\hline
+SMQB & stepperMoveQueryButton composite function enabling smooth movement\\
+\hline
+SE & ignore\\
+\hline
+TP & togglePen\\
+\hline
+PO & Engraver command\\
+\hline
+NI & nodeCountIncrement\\
+\hline
+ND & nodeCountDecrement\\
+\hline
+SN & setNodeCount\\
+\hline
+QN & queryNodeCount\\
+\hline
+SL & setLayer\\
+\hline
+QL & queryLayer\\
+\hline
+QP & queryPen\\
+\hline
+QB & queryButton\\
+\hline
+\end{tabular}
+\label{tab:Tabelle1}
+\end{minipage}
+
+
+
+
 \subsection{Inkscape}
 Die Pytonfunktionen des eggbot liegen in :inkscape Sphere-o-bot\textbackslash share\textbackslash extensions\\
  

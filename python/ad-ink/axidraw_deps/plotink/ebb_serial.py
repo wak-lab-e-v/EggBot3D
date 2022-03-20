@@ -35,7 +35,7 @@
 from distutils.version import LooseVersion
 import gettext
 import logging
-
+from time import sleep
 from .plot_utils_import import from_dependency_import
 inkex = from_dependency_import('ink_extensions.inkex')
 serial = from_dependency_import('serial')
@@ -60,7 +60,8 @@ def findPort():
             return None
         ebb_port = None
         for port in com_ports_list:
-            if port[1].startswith("EiBotBoard"):
+            #inkex.errormsg(gettext.gettext(str(port[1])))
+            if port[1].startswith("EiBotBoard") or port[1].startswith("Arduino"):
                 ebb_port = port[0]  # Success; EBB found by name match.
                 break  # stop searching-- we are done.
         if ebb_port is None:
@@ -282,13 +283,15 @@ def testPort(port_name):
     if port_name is not None:
         try:
             serial_port = serial.Serial(port_name, timeout=1.0)  # 1 second timeout!
-
+            #serial_port.baudrate = 9600
+            sleep(0.15)
             serial_port.flushInput()  # deprecated function name;
             # use serial_port.reset_input_buffer()
             # if we can be sure that we have pySerial 3+.
 
             serial_port.write('v\r'.encode('ascii'))
             str_version = serial_port.readline()
+            #inkex.errormsg(gettext.gettext(str_version.decode()))
             if str_version and str_version.startswith("EBB".encode('ascii')):
                 return serial_port
 

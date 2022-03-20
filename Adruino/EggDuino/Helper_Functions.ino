@@ -20,17 +20,17 @@ void initHardware(){
   }
 
 inline void loadPenPosFromEE() {
-  penUpPos = eeprom_read_word(penUpPosEEAddress);
-  penDownPos = eeprom_read_word(penDownPosEEAddress);
+  //penUpPos = eeprom_read_word(penUpPosEEAddress);
+  //penDownPos = eeprom_read_word(penDownPosEEAddress);
   penState = penUpPos;
 }
 
 inline void storePenUpPosInEE() {
-  eeprom_update_word(penUpPosEEAddress, penUpPos);
+  //eeprom_update_word(penUpPosEEAddress, penUpPos);
 }
 
 inline void storePenDownPosInEE() {
-  eeprom_update_word(penDownPosEEAddress, penDownPos);
+  //eeprom_update_word(penDownPosEEAddress, penDownPos);
 }
 
 inline void sendAck(){
@@ -40,4 +40,3 @@ inline void sendAck(){
 inline void sendError(){
 	Serial.print("unknown CMD\r\n");
 }
-

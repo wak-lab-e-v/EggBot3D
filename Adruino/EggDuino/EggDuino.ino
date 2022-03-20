@@ -33,7 +33,7 @@ Thanks to my wife and my daughter for their patience. :-)
 /*Pen Stepper:*/
 #define step2 5
 #define dir2 2
-#define enablePenMotor 8
+#define enablePenMotor 7
 #define penMicrostep 16 //MicrostepMode, only 1,2,4,8,16 allowed, because of Integer-Math in this Sketch
 
 /*Servo*/
@@ -60,8 +60,8 @@ Thanks to my wife and my daughter for their patience. :-)
 // Variables... be careful, by messing around here, evrything has a reason and crossrelations...
   int penMin=0;
   int penMax=0;
-  int penUpPos=5;  //can be overwritten from EBB-Command SC
-  int penDownPos=20; //can be overwritten from EBB-Command SC
+  int penUpPos=133;  //can be overwritten from EBB-Command SC
+  int penDownPos=90; //can be overwritten from EBB-Command SC
   int servoRateUp=0; //from EBB-Protocol not implemented on machine-side
   int servoRateDown=0;//from EBB-Protocol not implemented on machine-side
   long rotStepError=0;

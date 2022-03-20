@@ -21,6 +21,7 @@ void makeComInterface(){
   }
 
 void queryPen() {
+  // Returns: 0 for down, 1 for up, then OK<CR>
 	char state;
 	if (penState==penUpPos)
 		state='1';
@@ -217,9 +218,10 @@ void setPen(){
 	      delay(value);
 		  sendAck();
 		  }
-  if (val==NULL && arg !=NULL)  
+  if (val==NULL && arg !=NULL) { 
 			delay(500);
 			sendAck();
+      }    
 		//	Serial.println("delay");
   if (val==NULL && arg ==NULL)
 			sendError();
@@ -313,6 +315,7 @@ void stepperModeConfigure(){
   int cmd;
   int value;
   char *arg;
+  int oldState;
   arg = SCmd.next(); 
   if (arg != NULL) 
       cmd = atoi(arg);
@@ -322,12 +325,18 @@ void stepperModeConfigure(){
       value = atoi(val);
   if ((arg != NULL) && (val != NULL)){
      switch (cmd) {      
-       case 4: penDownPos= (int) ((float) (value-6000)/(float) 133.3); // transformation from EBB to PWM-Servo
+       case 4: oldState = penDownPos;
+               penDownPos= (int) ((float) (value-6000)/(float) 133.3); // transformation from EBB to PWM-Servo
                storePenDownPosInEE();
+               if (penState==oldState)
+                  penState=penDownPos;
                sendAck();
                break;
-       case 5: penUpPos= (int)((float) (value-6000)/(float) 133.3); // transformation from EBB to PWM-Servo
+       case 5: oldState = penUpPos;
+               penUpPos= (int)((float) (value-6000)/(float) 133.3); // transformation from EBB to PWM-Servo
                storePenUpPosInEE();
+               if (penState==oldState)
+                  penState=penUpPos;
                sendAck();
                break;
        case 6: //rotMin=value;    ignored
