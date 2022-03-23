@@ -60,7 +60,7 @@ Thanks to my wife and my daughter for their patience. :-)
 // Variables... be careful, by messing around here, evrything has a reason and crossrelations...
   int penMin=0;
   int penMax=0;
-  int penUpPos=133;  //can be overwritten from EBB-Command SC
+  int penUpPos=152;  //can be overwritten from EBB-Command SC
   int penDownPos=90; //can be overwritten from EBB-Command SC
   int servoRateUp=0; //from EBB-Protocol not implemented on machine-side
   int servoRateDown=0;//from EBB-Protocol not implemented on machine-side
