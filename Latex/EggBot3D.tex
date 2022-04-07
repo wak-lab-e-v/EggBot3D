@@ -44,7 +44,19 @@
   \item         Launch Inkscape, or quit and re-launch it if it is open.
 \end{enumerate}
 
+\subsection{Linux}
+Installation:
+\begin{verbatim}
+sudo add-apt-repository ppa:inkscape.dev/stable
+sudo apt-get update
+sudo apt-get install inkscape
+\end{verbatim}
 
+Damit der Nutzer unter Linux mit dem Eggbot sprechen kann, muss er zur Gruppe: ,,dailout`` hinzugefügt werden.\\
+\begin{verbatim}
+ls -l /dev/ttyACM*
+sudo usermod -a -G dialout <username>
+\end{verbatim}
 \section{AxiDraw Linux Commandline}
 \url{https://axidraw.com/doc/cli_api/}
 \begin{verbatim}
